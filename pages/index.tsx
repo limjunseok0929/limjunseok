@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import Head from 'next/head'
 import { CareerText, Description, MainText, SkillBtn, SocialsBtn } from '../components/components'
+import Link from 'next/link'
 
 const skillsNameArray = [
   'html',
@@ -151,7 +152,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <footer className='snap-center h-screen grid content-center'>
+        <div className='snap-center h-screen grid content-center'>
           <div className='text-center'>
             <MainText text='Socials 📱' />
             <Description text='저를 인터넷에서 만나보세요' />
@@ -159,6 +160,16 @@ const Home: NextPage = () => {
               {Object.entries(socialLinksObject).map(([_,k],i)=><SocialsBtn name={k.name} key={i} link={k.src} id={k.id} />)}
             </div>
           </div>
+        </div>
+        <footer className='snap-end flex justify-center'>
+          <Link href='https://github.com/limjunseok0929/limjunseok'>
+            <a target='_blank' className='flex space-x-2'>
+              <div className='w-6'>
+                <Image src='/img/socials/github.svg' alt='repo link' width='100%' height='100%' />
+              </div>
+              <span className='thin'>REPO</span>
+            </a>
+          </Link>
         </footer>
       </AnimatePresence>
     </>
