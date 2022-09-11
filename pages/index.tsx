@@ -50,7 +50,18 @@ const Home: NextPage = () => {
         <title>Junseok Lim</title>
       </Head>
       <AnimatePresence>
-        <div className="snap-center grid content-center h-screen">
+      <nav className='flex justify-center fixed h-16 w-full items-center bg-white shadow-md space-x-10 py-5 z-50'>
+        <div className='w-10'>
+          <Image src='/img/logo.png' alt='' width='100%' height='100%' />
+        </div>
+        <div className='border-r border-gray-400 h-full' />
+        <div className='flex space-x-10'>
+          {
+            ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><Link key={i} href={`#${_.toLowerCase()}`}><a>{_}</a></Link>)
+          }
+        </div>
+      </nav>
+        <div className="snap-center grid content-center h-screen" id='introduce'>
           <div className="flex flex-col justify-center space-y-1 absolute h-4/5 w-full">
             <div className="flex flex-col self-center items-center w-11/12 md:w-5/6 lg:w-4/5">
               <motion.div
@@ -101,7 +112,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="snap-center grid content-center h-screen">
+        <div className="snap-center grid content-center h-screen" id='skills'>
           <div className="flex flex-row flex-grow flex-wrap justify-center pt-4 text-center">
             <div>
               <MainText text='Skills 💪' />
@@ -114,7 +125,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="snap-center grid content-center h-screen">
+        <div className="snap-center grid content-center h-screen" id='projects'>
           <div className="flex flex-row flex-grow flex-wrap justify-center md:space-x-8 pt-24">
             <div className='text-center'>
               <MainText text='Projects 💡' />
@@ -137,7 +148,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className="snap-center grid content-center h-screen">
+        <div className="snap-center grid content-center h-screen" id='career'>
           <div className="flex flex-row flex-grow flex-wrap justify-center md:space-x-8 pt-24">
             <div className='text-center'>
               <MainText text='Career 🎓' />
@@ -152,7 +163,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className='snap-center h-screen grid content-center'>
+        <div className='snap-center h-screen grid content-center' id='socials'>
           <div className='text-center'>
             <MainText text='Socials 📱' />
             <Description text='저를 인터넷에서 만나보세요' />
