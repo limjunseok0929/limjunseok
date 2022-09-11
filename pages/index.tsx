@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import Head from 'next/head'
-import { CareerText, Description, MainText, SkillBtn } from '../components/components'
+import { CareerText, Description, MainText, SkillBtn, SocialsBtn } from '../components/components'
 
 const skillsNameArray = [
   'html',
@@ -19,21 +19,28 @@ const skillsNameArray = [
   'tailwindcss'
 ]
 
-/* 추가해야 하는 것 */
-// const socialLinksObject = {
-//   email: {
-//     name: 'email',
-//   },
-//   github: {
-//     name: 'github',
-//   },
-//   npm: {
-//     name: 'npm',
-//   },
-//   stackoverflow: {
-//     name: 'stackoverflow',
-//   },
-// }
+const socialLinksObject = {
+  github: {
+    name: 'github',
+    src: 'https://github.com/limjunseok0929',
+    id: 'limjunseok0929',
+  },
+  npm: {
+    name: 'npm',
+    src: 'https://www.npmjs.com/~limjunseok',
+    id: 'limjunseok',
+  },
+  stackoverflow: {
+    name: 'stackoverflow',
+    src: 'https://stackoverflow.com/users/18835395/limjunseok',
+    id: 'limjunseok',
+  },
+  solved: {
+    name: 'solvedac',
+    src: 'https://solved.ac/profile/limjunseok_dev',
+    id: 'limjunseok_dev',
+  }
+}
 
 const Home: NextPage = () => {
   return (
@@ -90,19 +97,6 @@ const Home: NextPage = () => {
                   new Date().getFullYear()-2009+1
                 }살 입니다 😎
               </motion.div>
-              <motion.div
-                initial={{ y: 30, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{
-                  type: 'spring',
-                  delay: 0.5,
-                  stiffness: 250,
-                  damping: 100,
-                  mass: 1.8
-                }}
-                className="flex space-x-2 pl-1 py-2"
-              >
-              </motion.div>
             </div>
           </div>
         </div>
@@ -157,6 +151,15 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+        <footer className='snap-center h-screen grid content-center'>
+          <div className='text-center'>
+            <MainText text='Socials 📱' />
+            <Description text='저를 인터넷에서 만나보세요' />
+            <div className='flex justify-center space-x-20 mt-3'>
+              {Object.entries(socialLinksObject).map(([_,k],i)=><SocialsBtn name={k.name} key={i} link={k.src} id={k.id} />)}
+            </div>
+          </div>
+        </footer>
       </AnimatePresence>
     </>
   )
