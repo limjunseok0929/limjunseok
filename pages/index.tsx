@@ -50,17 +50,17 @@ const Home: NextPage = () => {
         <title>Junseok Lim</title>
       </Head>
       <AnimatePresence>
-      <nav className='flex justify-center fixed h-16 w-full items-center bg-white shadow-md space-x-10 py-5 z-50'>
-        <div className='w-10'>
-          <Image src='/img/logo.png' alt='' width='100%' height='100%' />
-        </div>
-        <div className='border-r border-gray-400 h-full' />
-        <div className='flex space-x-10'>
-          {
-            ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><Link key={i} href={`#${_.toLowerCase()}`}><a>{_}</a></Link>)
-          }
-        </div>
-      </nav>
+        <nav className='flex justify-center fixed h-16 w-full items-center bg-white shadow-md space-x-10 py-5 z-50'>
+          <div className='w-10'>
+            <Image src='/img/logo.png' alt='' width='100%' height='100%' />
+          </div>
+          <div className='border-r border-gray-400 h-full' />
+          <div className='flex space-x-10'>
+            {
+              ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><Link key={i} href={`#${_.toLowerCase()}`}><a>{_}</a></Link>)
+            }
+          </div>
+        </nav>
         <div className="snap-center grid content-center h-screen" id='introduce'>
           <div className="flex flex-col justify-center space-y-1 absolute h-4/5 w-full">
             <div className="flex flex-col self-center items-center w-11/12 md:w-5/6 lg:w-4/5">
