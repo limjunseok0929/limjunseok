@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 import Head from 'next/head'
-import { CareerText, Description, MainText, SkillBtn, SocialsBtn } from '../components/components'
+import { CareerText, Description, Header, MainText, SkillBtn, SocialsBtn } from '../components/components'
 import Link from 'next/link'
 
 const skillsNameArray = [
@@ -50,17 +50,7 @@ const Home: NextPage = () => {
         <title>Junseok Lim</title>
       </Head>
       <AnimatePresence>
-        <nav className='flex justify-center fixed h-16 w-full items-center bg-white shadow-md space-x-10 py-5 z-50'>
-          <div className='w-10'>
-            <Image src='/img/logo.png' alt='' width='100%' height='100%' />
-          </div>
-          <div className='border-r border-gray-400 h-full' />
-          <div className='flex space-x-10'>
-            {
-              ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><Link key={i} href={`#${_.toLowerCase()}`}><a>{_}</a></Link>)
-            }
-          </div>
-        </nav>
+        <Header />
         <div className="snap-center grid content-center h-screen" id='introduce'>
           <div className="flex flex-col justify-center space-y-1 absolute h-4/5 w-full">
             <div className="flex flex-col self-center items-center w-11/12 md:w-5/6 lg:w-4/5">
@@ -76,7 +66,9 @@ const Home: NextPage = () => {
                   mass: 1.8
                 }}
               >
-                <Image src='/img/logo.png' alt='profile' width={50} height={50} />
+                <div className='w-10 h-10 sm:w-16 sm:h-16'>
+                  <Image src='/img/logo.png' alt='profile' width={100} height={100} />
+                </div>
                 <p className="text-2xl sm:text-4xl thin">Junseok Lim</p>
               </motion.div>
               <motion.div
@@ -91,7 +83,7 @@ const Home: NextPage = () => {
                 }}
                 className='items-center flex'
               >
-                <h1 className='text-5xl bg-black text-white font-black my-2'>A Student Developer</h1>
+                <h1 className='text-3xl sm:text-5xl bg-black text-white font-black my-2'>A Student Developer</h1>
               </motion.div>
               <motion.div
                 initial={{ x: -30, opacity: 0 }}
@@ -103,7 +95,7 @@ const Home: NextPage = () => {
                   damping: 100,
                   mass: 1.8
                 }}
-                className="text-lg"
+                className="text-sm sm:text-lg"
               >
                 개발자가 되고 싶은 {
                   new Date().getFullYear()-2009+1
@@ -167,7 +159,7 @@ const Home: NextPage = () => {
           <div className='text-center'>
             <MainText text='Socials 📱' />
             <Description text='저를 인터넷에서 만나보세요' />
-            <div className='flex justify-center space-x-20 mt-3'>
+            <div className='flex flex-row flex-grow flex-wrap justify-center pt-4 space-x-5 space-y-5 items-center'>
               {Object.entries(socialLinksObject).map(([_,k],i)=><SocialsBtn name={k.name} key={i} link={k.src} id={k.id} />)}
             </div>
           </div>

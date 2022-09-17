@@ -8,12 +8,15 @@
 - Framer-Motion
 - Pretendard Font
 - Simple Icons
+- Hero Icons
 
-구조, 코드를 참고한 사이트: https://www.chul.tech/
+구조, 코드를 참고한 사이트:
+https://www.chul.tech/
+https://github.com/chul0721/portfolio
 
 # TO DO:
 
-- 반응형 디자인 추가하기
+- Buy Domain
 
 # Link:
 
