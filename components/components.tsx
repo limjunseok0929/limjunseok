@@ -51,27 +51,27 @@ export const Header = () => {
                 }
                 </div>
                 <nav className='hidden sm:block'>
-                <div className='flex justify-center h-16 py-5 items-center space-x-10'>
-                    <div className='w-10'>
-                    <Image src='/img/logo.png' alt='logo' width='100%' height='100%' />
+                    <div className='flex justify-center h-12 py-3 items-center space-x-10'>
+                        <div className='w-10'>
+                        <Image src='/img/logo.png' alt='logo' width='100%' height='100%' />
+                        </div>
+                        <div className='border-r border-gray-400 h-full' />
+                        <div className='flex space-x-10'>
+                        {
+                            ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><Link key={i} href={`#${_.toLowerCase()}`}><a>{_}</a></Link>)
+                        }
+                        </div>              
                     </div>
-                    <div className='border-r border-gray-400 h-full' />
-                    <div className='flex space-x-10'>
-                    {
-                        ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><Link key={i} href={`#${_.toLowerCase()}`}><a>{_}</a></Link>)
-                    }
-                    </div>              
-                </div>
-                </nav>
-                <nav className='block sm:hidden'>
-                <div className='h-16 py-5 flex items-center justify-center space-x-5'>
-                    <div className='w-10'>
-                    <Image src='/img/logo.png' alt='logo' width='100%' height='100%' />
+                    </nav>
+                    <nav className='block sm:hidden'>
+                    <div className='h-16 py-5 flex items-center justify-center space-x-5'>
+                        <div className='w-10'>
+                        <Image src='/img/logo.png' alt='logo' width='100%' height='100%' />
+                        </div>
                     </div>
-                </div>
                 </nav>
             </header>
-            <div className={`fixed w-full bg-white z-40 shadow-md h-2/5 pt-20 pl-12 space-y-8 ${openMenu?'block':'hidden'} h-16`}>
+            <div className={`fixed w-full bg-white z-40 shadow-md h-2/5 pt-20 pl-12 space-y-5 ${openMenu?'block':'hidden'} h-16`}>
                 {
                     ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><div key={i}><Link href={`#${_.toLowerCase()}`}><a>{_}</a></Link></div>)
                 }
