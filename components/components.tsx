@@ -71,7 +71,7 @@ export const Header = () => {
                     </div>
                 </nav>
             </header>
-            <div className={`fixed w-full bg-white z-40 shadow-md h-2/5 pt-20 pl-12 space-y-5 ${openMenu?'block':'hidden'} h-16`}>
+            <div className={`fixed w-full bg-white z-40 shadow-md h-2/4 md:h-2/5 pt-20 pl-12 space-y-7 ${openMenu?'block':'hidden'} block sm:hidden h-16`}>
                 {
                     ['Introduce','Skills','Projects','Career','Socials'].map((_,i)=><div key={i}><Link href={`#${_.toLowerCase()}`}><a>{_}</a></Link></div>)
                 }
