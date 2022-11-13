@@ -39,7 +39,7 @@ const socialLinksObject = {
   solved: {
     name: 'solvedac',
     src: 'https://solved.ac/profile/limjunseok_dev',
-    id: 'limjunseok_dev',
+    id: 'dlawnstjr',
   }
 }
 
