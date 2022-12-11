@@ -13,7 +13,7 @@ const SkillIconsArray = [
   'typescript',
   'node.js',
   'react',
-  'next.js'
+  'next.js',
   'tailwindcss'
 ]
 
