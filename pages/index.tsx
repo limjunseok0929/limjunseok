@@ -81,7 +81,14 @@ const Home: NextPage = () => {
               {
                 SkillIconsArray.map((_,i) => (
                   <div key={i}>
-                  <SkillBtn skillName={_} />
+                    <div>
+                        <div className='w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white rounded-full shadow-md flex items-center justify-center'>
+                            <div className='p-3 sm:p-3 md:p-4 z-0'>
+                                <Image src={`/img/skills/${_}.png`} alt={`${_}`} width='100%' height='100%' />
+                            </div>
+                        </div>
+                        <h1 className='thin text-xs sm:text-sm md:text-base'>{_[0].toUpperCase() + _.slice(1,_.length)}</h1>
+                    </div>
                 </div>
                 ))
               }
@@ -117,7 +124,22 @@ const Home: NextPage = () => {
               {
                 SocialIconsArray.map((_,i) => (
                   <div key={i}>
-                    <SocialBtn socialName={_[0]} socialLink={_[1]} />
+                    <Link href={_[1]}>
+                        <a target='_blank'>
+                            <div className='w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-white rounded-full shadow-md flex items-center justify-center'>
+                                <div className='p-3 sm:p-3 md:p-4 z-0'>
+                                    <Image
+                                        src={`/img/socials/${_[0]}.png`}
+                                        alt={`${_[0]}`}
+                                        className='rounded-full'
+                                        width='100%'
+                                        height='100%'
+                                    />
+                                </div>
+                            </div>
+                            <h1 className='thin text-xs sm:text-sm md:text-base'>{_[0][0].toUpperCase() + _[0].slice(1,_[0].length)}</h1>
+                        </a>
+                    </Link>
                   </div>
                 ))
               }
@@ -133,7 +155,7 @@ const Home: NextPage = () => {
           </Link>
           <div className='flex items-center space-x-2'>
             <h1 className='text-xs sm:text-sm md:text-base'>&copy; Junseok Lim</h1>
-            <div className='w-4 sm:w-5 md:w-6'>
+            <div className='w-4 sm:w-5 md:'>
               <Image src='/img/profile-t.png' alt='profile' width='100%' height='100%' />
             </div>
           </div>
