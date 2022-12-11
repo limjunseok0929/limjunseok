@@ -1,23 +1,7 @@
-# 임준석 (Junseok Lim)의 포트폴리오 사이트 입니다!
-
-사용한것들:
-
-- NextJS
+# Junseok Lim's Portfolio Website
+https://limjunseok.vercel.app
+## Used:
+- Next.JS
 - Typescript
-- TailwindCSS
-- Framer-Motion
-- Pretendard Font
-- Simple Icons
-- Hero Icons
-
-구조, 코드를 참고한 사이트:
-https://www.chul.tech/
-https://github.com/chul0721/portfolio
-
-# TO DO:
-
-- Buy Domain
-
-# Link:
-
-https://limjunseok.vercel.app/
+- Tailwindcss
+- Pretendard
