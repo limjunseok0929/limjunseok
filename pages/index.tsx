@@ -11,15 +11,9 @@ const SkillIconsArray = [
   'css',
   'javascript',
   'typescript',
-  'python',
-  'c',
-  'c++',
-  'go',
   'node.js',
   'react',
-  'next.js',
-  'electron',
-  'prisma',
+  'next.js'
   'tailwindcss'
 ]
 
