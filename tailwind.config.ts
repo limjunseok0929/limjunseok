@@ -13,7 +13,6 @@ const config: Config = {
       thin: ['thin'],
       bold: ['bold'],
       black: ['black'],
-      quenos: ['quenos']
     }
   },
   plugins: [],
