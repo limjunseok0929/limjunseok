@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='ko' className='scroll-smooth snap-mandatory snap-y'>
+    <html lang='ko' className='scroll-smooth snap-y'>
       <body className='font-regular'>{children}</body>
     </html>
   )
