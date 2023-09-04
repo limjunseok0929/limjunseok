@@ -27,11 +27,11 @@ const SocialIconsArray = [
   ],
   [
     'instagram',
-    'https://www.instagram.com/junseok_lim09'
+    'https://www.instagram.com/jxnse0k_'
   ],
   [
     'solved.ac',
-    'https://solved.ac/profile/dlawnstjr'
+    'https://solved.ac/profile/junseok_lim09'
   ],
   [
     'npm',
