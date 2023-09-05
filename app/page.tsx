@@ -1,7 +1,6 @@
 'use client'
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
 import SkillBtn from './components/SkillBtn';
 import SocialBtn from './components/SocialBtn';
 import { useEffect, useState } from 'react';
@@ -106,9 +105,9 @@ const Home: NextPage = () => {
             </div>
             <div className='flex flex-row flex-grow flex-wrap pt-4 space-x-6 sm:space-x-8 md:space-x-10 items-center text-center'>
               {
-                SkillIconsArray.map((_,i) => (
+                SkillIconsArray.map((name, i) => (
                   <div key={i}>
-                    <SkillBtn skillName={_} />
+                    <SkillBtn skillName={name} />
                   </div>
                 ))
               }
@@ -142,9 +141,9 @@ const Home: NextPage = () => {
             </div>
             <div className='flex flex-row flex-grow flex-wrap pt-4 space-x-6 sm:space-x-8 md:space-x-10 items-center text-center'>
               {
-                SocialIconsArray.map((_,i) => (
+                SocialIconsArray.map(([name, link],i) => (
                   <div key={i}>
-                    <SocialBtn socialName={_[0]} socialLink={_[1]} />
+                    <SocialBtn socialName={name} socialLink={link} />
                   </div>
                 ))
               }

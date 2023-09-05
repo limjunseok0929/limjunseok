@@ -35,25 +35,25 @@ export default function RootLayout({
             <div>
               <div className='md:flex md:space-x-10 space-y-5 md:space-y-0'>
                 <div className='space-y-3'>
-                  <h1 className='font-bold text-4xl'>연락처</h1>
-                  <div className='text-xl'>
+                  <h1 className='font-bold text-2xl md:text-3xl xl:text-4xl'>연락처</h1>
+                  <div className='text-base md:text-lg xl:text-xl'>
                     <p>010-3054-4357</p>
                     <p>limjunseokdev@gmail.com</p>
                   </div>
                 </div>
                 <div className='space-y-3'>
-                  <h1 className='font-bold text-4xl'>SNS</h1>
-                  <div className='text-xl'>
-                    <Link href='https://github.com/limjunseok0929'><p className='hover:underline'>깃허브</p></Link>
-                    <Link href='https://instagram.com/jxnse0k_'><p className='hover:underline'>인스타그램</p></Link>
-                    <Link href='https://www.facebook.com/profile.php?id=100088201783682'><p className='hover:underline'>페이스북</p></Link>
+                  <h1 className='font-bold text-2xl md:text-3xl xl:text-4xl'>SNS</h1>
+                  <div className='text-base md:text-lg xl:text-xl'>
+                    <Link target='_blank' href='https://github.com/limjunseok0929'><p className='hover:underline'>깃허브</p></Link>
+                    <Link target='_blank' href='https://instagram.com/jxnse0k_'><p className='hover:underline'>인스타그램</p></Link>
+                    <Link target='_blank' href='https://www.facebook.com/profile.php?id=100088201783682'><p className='hover:underline'>페이스북</p></Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className='text-base xl:text-lg flex flex-col md:items-center'>
-            <Link href='https://github.com/limjunseok0929/limjunseok'><p className='hover:underline'>Made with ❤️</p></Link>
+            <Link target='_blank' href='https://github.com/limjunseok0929/limjunseok'><p className='hover:underline'>Made with ❤️</p></Link>
             <p>Copyright &copy; {date.getFullYear()}, Junseok Lim. All Rights Reserved.</p>
           </div>
         </footer>
