@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: '임준석 | Junseok Lim',
   description: '임준석의 포트폴리오 웹사이트 | Junseok\'s portfolio website',
   icons: {
-    icon: '/favicon.png'
+    icon: '/favicon.ico'
   },
 }
 
