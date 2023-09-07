@@ -1,20 +1,32 @@
 'use client'
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import SkillBtn from './components/SkillBtn';
 import SocialBtn from './components/SocialBtn';
 import { useEffect, useState } from 'react';
+import Skills from './components/SkillsPage';
 
-
-const SkillIconsArray = [
-  'html',
-  'css',
-  'javascript',
-  'typescript',
-  'node.js',
-  'react',
-  'next.js',
-  'tailwindcss'
+const skills = [
+  [
+    'FRONTEND',
+    'html',
+    'css',
+    'javascript',
+    'typescript',
+    'react',
+    'next.js',
+    'tailwind css'
+  ],
+  [
+    'BACKEND',
+    'node.js',
+    'prisma',
+    'mongo db',
+    'mysql',
+  ],
+  [
+    'TOOLS',
+    'VS CODE'
+  ]
 ]
 
 const SocialIconsArray = [
@@ -75,7 +87,7 @@ const Home: NextPage = () => {
       <div className='grid h-screen'>
         <div className='flex flex-col justify-center pt-20 space-y-1 absolute h-4/5 w-full'>
           <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5'>
-            <div className='space-y-5 sm:space-y-20 md:space-y-10'>
+            <div className='space-y-20 md:space-y-10'>
               <div className='space-y-3'>
                 <h1 className='font-bold text-3xl sm:text-4xl md:text-5xl'>{helloText}</h1>
                 <div className='flex justify-between'>
@@ -99,16 +111,15 @@ const Home: NextPage = () => {
 
       <div className='grid h-screen'>
         <div className='flex flex-col justify-center pt-20 space-y-1 absolute h-4/5 w-full'>
-          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-5'>
-            <div>
-              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>사용 가능한 <span className='text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>언어/기술</span></h1>
+          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-20'>
+            <div className='flex items-end'>
+              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>사용 가능한 <span className='text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>스킬</span></h1>
+              <h1><span className='text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>SKILLS</span></h1>
             </div>
-            <div className='flex flex-row flex-grow flex-wrap pt-4 space-x-6 sm:space-x-8 md:space-x-10 items-center text-center'>
+            <div className='pl-1 space-y-10'>
               {
-                SkillIconsArray.map((name, i) => (
-                  <div key={i}>
-                    <SkillBtn skillName={name} />
-                  </div>
+                skills.map((content, i) => (
+                  content.map(([name, array], i) => <Skills array={array} name={name} />)
                 ))
               }
             </div>

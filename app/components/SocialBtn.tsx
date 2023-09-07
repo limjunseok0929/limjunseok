@@ -1,7 +1,11 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
-import { SocialBtnType } from './types'
+
+export type SocialBtnType = {
+    socialName: string;
+    socialLink: string;
+}
 
 const SocialBtn: FC<SocialBtnType> = (props) => {
     return (
