@@ -7,7 +7,6 @@ import Skills from './components/SkillsPage';
 
 const skills = [
   [
-    'FRONTEND',
     'html',
     'css',
     'javascript',
@@ -17,17 +16,18 @@ const skills = [
     'tailwind css'
   ],
   [
-    'BACKEND',
     'node.js',
     'prisma',
     'mongo db',
     'mysql',
   ],
   [
-    'TOOLS',
-    'VS CODE'
+    'visual studio code',
+    'figma'
   ]
 ]
+
+const [prontend, backend, tools] = skills
 
 const SocialIconsArray = [
   [
@@ -111,17 +111,15 @@ const Home: NextPage = () => {
 
       <div className='grid h-screen'>
         <div className='flex flex-col justify-center pt-20 space-y-1 absolute h-4/5 w-full'>
-          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-20'>
+          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-10'>
             <div className='flex items-end'>
               <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>사용 가능한 <span className='text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>스킬</span></h1>
               <h1><span className='text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>SKILLS</span></h1>
             </div>
             <div className='pl-1 space-y-10'>
-              {
-                skills.map((content, i) => (
-                  content.map(([name, array], i) => <Skills array={array} name={name} />)
-                ))
-              }
+              <Skills array={prontend} section='PRONTEND' />
+              <Skills array={backend} section='BACKEND' />
+              <Skills array={tools} section='TOOLS' />
             </div>
           </div>
         </div>
