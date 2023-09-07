@@ -111,12 +111,12 @@ const Home: NextPage = () => {
 
       <div className='grid h-screen'>
         <div className='flex flex-col justify-center pt-20 space-y-1 absolute h-4/5 w-full'>
-          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-10'>
-            <div className='flex items-end'>
+          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-16'>
+            <div className='flex space-x-1 items-end'>
               <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>사용 가능한 <span className='text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>스킬</span></h1>
               <h1><span className='text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>SKILLS</span></h1>
             </div>
-            <div className='pl-1 space-y-10'>
+            <div className='pl-1 space-y-5'>
               <Skills array={prontend} section='PRONTEND' />
               <Skills array={backend} section='BACKEND' />
               <Skills array={tools} section='TOOLS' />
@@ -127,14 +127,14 @@ const Home: NextPage = () => {
 
       <div className='grid h-screen'>
         <div className='flex flex-col justify-center pt-20 space-y-1 absolute h-4/5 w-full'>
-          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-5'>
-            <div>
-              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>My <span className='text-3xl sm:text-4xl md:text-5xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-bold'>Projects</span></h1>
-              <h1 className='font-thin text-base sm:text-lg md:text-xl'>The projects that I made by programming</h1>
+          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-20'>
+            <div className='flex space-x-1 items-end'>
+              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>만든 <span className='text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>프로젝트</span></h1>
+              <h1><span className='text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>PROJECTS</span></h1>
             </div>
-            <div className='flex flex-row flex-grow flex-wrap pt-4 space-x-10 items-center text-center'>
-              <p className='text-sm sm:text-base md:text-lg'>
-                Not any projects yet.
+            <div className='pl-1'>
+              <p className='text-base sm:text-lg md:text-xl font-medium'>
+                아직 완성된 프로젝트가 없어요.
               </p>
             </div>
           </div>
@@ -143,16 +143,16 @@ const Home: NextPage = () => {
 
       <div className='grid h-screen'>
         <div className='flex flex-col justify-center pt-20 space-y-1 absolute h-4/5 w-full'>
-          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-5'>
-            <div>
-              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>My <span className='text-3xl sm:text-4xl md:text-5xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-bold'>Socials</span></h1>
-              <h1 className='font-thin text-base sm:text-lg md:text-xl'>You can see me on Social Network</h1>
+          <div className='flex flex-col self-center w-11/12 md:w-5/6 lg:w-4/5 space-y-14'>
+            <div className='flex space-x-1 items-end'>
+              <h1 className='text-3xl sm:text-4xl md:text-5xl font-bold'>사용중인 <span className='text-4xl sm:text-5xl md:text-6xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>소셜 미디어</span></h1>
+              <h1><span className='text-lg sm:text-xl md:text-2xl text-transparent bg-clip-text from-[#7194FF] to-[#A855F7] bg-gradient-to-r font-black'>Socials</span></h1>
             </div>
             <div className='flex flex-row flex-grow flex-wrap pt-4 space-x-6 sm:space-x-8 md:space-x-10 items-center text-center'>
               {
                 SocialIconsArray.map(([name, link],i) => (
                   <div key={i}>
-                    <SocialBtn socialName={name} socialLink={link} />
+                    <SocialBtn name={name} link={link} />
                   </div>
                 ))
               }
