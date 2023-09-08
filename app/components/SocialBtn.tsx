@@ -15,7 +15,7 @@ const SocialBtn: FC<SocialBtnType> = (props) => {
                     <Image
                         src={`/img/socials/${props.name}.png`}
                         alt={`${props.name}`}
-                        // className='rounded-full'
+                        className='rounded-full'
                         width={100}
                         height={100}
                     />
