@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico'
   },
+  verification: {
+    google: 'KMrOUbtD2ESScbxaagmrIG2uVE0B2qPaq2_elIQMiu8'
+  },
 }
 
 const date = new Date()
