@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang='ko'>
       <body className='font-regular pb-3'>
-        <nav className='fixed w-full px-64 py-8 flex justify-between text-gray-500 z-50'>
+        <nav className='fixed w-full px-64 py-6 flex justify-between text-gray-500 z-50 bg-white border-b border-gray-100'>
           {
             NAV.map(({name, path}, i) => (
               <Link href={`/${path}`} className='hover:text-black' key={i}>{name}</Link>
